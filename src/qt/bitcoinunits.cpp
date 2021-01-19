@@ -1,4 +1,4 @@
-// Copyright (c) 2011-2018 The Bitcoin Core developers
+// Copyright (c) 2011-2017 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -20,7 +20,6 @@ QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
     unitlist.append(BTC);
     unitlist.append(mBTC);
     unitlist.append(uBTC);
-    unitlist.append(nBTC);
     return unitlist;
 }
 
@@ -31,7 +30,6 @@ bool BitcoinUnits::valid(int unit)
     case BTC:
     case mBTC:
     case uBTC:
-    case nBTC:
         return true;
     default:
         return false;
@@ -44,8 +42,7 @@ QString BitcoinUnits::longName(int unit)
     {
     case BTC: return QString("CTC");
     case mBTC: return QString("mCTC");
-    case uBTC: return QString("uCTC");
-    case nBTC: return QString("nCTC");
+    case uBTC: return QString("µCTC");
     default: return QString("???");
     }
 }
@@ -54,9 +51,8 @@ QString BitcoinUnits::shortName(int unit)
 {
     switch(unit)
     {
-    case uBTC: return QString::fromUtf8("uCTC");
-    case nBTC: return QString("nCTC");
-    default: return longName(unit);
+    case uBTC: return QString::fromUtf8("bits");
+    default:   return longName(unit);
     }
 }
 
@@ -65,9 +61,8 @@ QString BitcoinUnits::description(int unit)
     switch(unit)
     {
     case BTC: return QString("ConnectiCoins");
-    case mBTC: return QString("Milli-CTC (1 / 1" THIN_SP_UTF8 "000)");
-    case uBTC: return QString("Micro-CTC (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
-    case nBTC: return QString("Nano-CTC (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+    case mBTC: return QString("Milli-ConnectiCoins (1 / 1" THIN_SP_UTF8 "000)");
+    case uBTC: return QString("Micro-ConnectiCoins (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     default: return QString("???");
     }
 }
@@ -76,11 +71,10 @@ qint64 BitcoinUnits::factor(int unit)
 {
     switch(unit)
     {
-    case BTC: return 100000000;
+    case BTC:  return 100000000;
     case mBTC: return 100000;
     case uBTC: return 100;
-    case nBTC: return 1;
-    default: return 100000000;
+    default:   return 100000000;
     }
 }
 
@@ -91,7 +85,6 @@ int BitcoinUnits::decimals(int unit)
     case BTC: return 8;
     case mBTC: return 5;
     case uBTC: return 2;
-    case nBTC: return 0;
     default: return 0;
     }
 }
@@ -107,7 +100,9 @@ QString BitcoinUnits::format(int unit, const CAmount& nIn, bool fPlus, Separator
     int num_decimals = decimals(unit);
     qint64 n_abs = (n > 0 ? n : -n);
     qint64 quotient = n_abs / coin;
+    qint64 remainder = n_abs % coin;
     QString quotient_str = QString::number(quotient);
+    QString remainder_str = QString::number(remainder).rightJustified(num_decimals, '0');
 
     // Use SI-style thin space separators as these are locale independent and can't be
     // confused with the decimal marker.
@@ -121,14 +116,7 @@ QString BitcoinUnits::format(int unit, const CAmount& nIn, bool fPlus, Separator
         quotient_str.insert(0, '-');
     else if (fPlus && n > 0)
         quotient_str.insert(0, '+');
-
-    if (num_decimals > 0) {
-        qint64 remainder = n_abs % coin;
-        QString remainder_str = QString::number(remainder).rightJustified(num_decimals, '0');
-        return quotient_str + QString(".") + remainder_str;
-    } else {
-        return quotient_str;
-    }
+    return quotient_str + QString(".") + remainder_str;
 }
 
 

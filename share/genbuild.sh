@@ -3,7 +3,6 @@
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-export LC_ALL=C
 if [ $# -gt 1 ]; then
     cd "$2" || exit 1
 fi
@@ -36,8 +35,7 @@ if [ "${BITCOIN_GENBUILD_NO_GIT}" != "1" -a -e "$(which git 2>/dev/null)" -a "$(
 
     # otherwise generate suffix from git, i.e. string like "59887e8-dirty"
     SUFFIX=$(git rev-parse --short HEAD)
-  #  git diff-index --quiet HEAD -- || SUFFIX="$SUFFIX-dirty"
-    git diff-index --quiet HEAD -- || SUFFIX="0"
+    git diff-index --quiet HEAD -- || SUFFIX="$SUFFIX-dirty"
 fi
 
 if [ -n "$DESC" ]; then

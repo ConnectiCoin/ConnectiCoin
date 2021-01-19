@@ -243,6 +243,10 @@ Exportar los datos en la pestaña actual a un archivo</translation>
         <translation>&amp;Visión de conjunto</translation>
     </message>
     <message>
+        <source>Node</source>
+        <translation>Nodo</translation>
+    </message>
+    <message>
         <source>Show general overview of wallet</source>
         <translation>Mostrar vista general de la billetera</translation>
     </message>
@@ -285,6 +289,14 @@ Exportar los datos en la pestaña actual a un archivo</translation>
     <message>
         <source>&amp;Change Passphrase...</source>
         <translation>&amp;Cambiar contraseña...</translation>
+    </message>
+    <message>
+        <source>&amp;Sending addresses...</source>
+        <translation>&amp;Enviando Direcciones...</translation>
+    </message>
+    <message>
+        <source>&amp;Receiving addresses...</source>
+        <translation>&amp;Recibiendo Direcciones...</translation>
     </message>
     <message>
         <source>Open &amp;URI...</source>
@@ -333,6 +345,10 @@ Exportar los datos en la pestaña actual a un archivo</translation>
     <message>
         <source>ConnectiCoin</source>
         <translation>ConnectiCoin</translation>
+    </message>
+    <message>
+        <source>Wallet</source>
+        <translation>Billetera</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -425,10 +441,6 @@ Exportar los datos en la pestaña actual a un archivo</translation>
     <message>
         <source>Up to date</source>
         <translation>A hoy</translation>
-    </message>
-    <message>
-        <source>&amp;Window</source>
-        <translation>Ventana</translation>
     </message>
     <message>
         <source>Connecting to peers...</source>
@@ -629,6 +641,10 @@ Exportar los datos en la pestaña actual a un archivo</translation>
         <translation>Y dirección</translation>
     </message>
     <message>
+        <source>New receiving address</source>
+        <translation>Nueva dirección de recepción</translation>
+    </message>
+    <message>
         <source>New sending address</source>
         <translation>Nueva dirección de envío</translation>
     </message>
@@ -685,6 +701,34 @@ Exportar los datos en la pestaña actual a un archivo</translation>
     <message>
         <source>Command-line options</source>
         <translation>Opciones de línea de comando</translation>
+    </message>
+    <message>
+        <source>Usage:</source>
+        <translation>Uso:</translation>
+    </message>
+    <message>
+        <source>command-line options</source>
+        <translation>opciones de línea de comando</translation>
+    </message>
+    <message>
+        <source>UI Options:</source>
+        <translation>Opciones de UI:</translation>
+    </message>
+    <message>
+        <source>Set language, for example "de_DE" (default: system locale)</source>
+        <translation>Establecer el idioma, por ejemplo "de_DE" (predeterminado: configuración regional del sistema)</translation>
+    </message>
+    <message>
+        <source>Start minimized</source>
+        <translation>Iniciar minimizado</translation>
+    </message>
+    <message>
+        <source>Set SSL root certificates for payment request (default: -system-)</source>
+        <translation>Establecer certificados raíz SSL para solicitud de pago (predeterminado: -sistema-)</translation>
+    </message>
+    <message>
+        <source>Reset all settings changed in the GUI</source>
+        <translation>Restablecer todas las configuraciones modificadas en la GUI</translation>
     </message>
 </context>
 <context>
@@ -807,6 +851,10 @@ Exportar los datos en la pestaña actual a un archivo</translation>
         <translation>Tamaño de la memoria caché de la base de datos</translation>
     </message>
     <message>
+        <source>MB</source>
+        <translation>MB</translation>
+    </message>
+    <message>
         <source>Number of script &amp;verification threads</source>
         <translation>Cantidad de secuencias de comandos y verificación</translation>
     </message>
@@ -833,6 +881,10 @@ Exportar los datos en la pestaña actual a un archivo</translation>
     <message>
         <source>Minimize instead of exit the application when the window is closed. When this option is enabled, the application will be closed only after selecting Exit in the menu.</source>
         <translation>Minimice en lugar de salir de la aplicación cuando la ventana esté cerrada. Cuando esta opción está habilitada, la aplicación se cerrará solo después de seleccionar Salir en el menú.</translation>
+    </message>
+    <message>
+        <source>Active command-line options that override above options:</source>
+        <translation>Opciones de línea de comando activas que anulan las opciones anteriores:</translation>
     </message>
     <message>
         <source>Open Configuration File</source>
@@ -1657,10 +1709,6 @@ Exportar los datos en la pestaña actual a un archivo</translation>
         <source>Label</source>
         <translation>Etiqueta</translation>
     </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Billetera</translation>
-    </message>
     </context>
 <context>
     <name>RecentRequestsTableModel</name>
@@ -1857,9 +1905,6 @@ Tarifa de copia</translation>
     </context>
 <context>
     <name>UnitDisplayStatusBarControl</name>
-    </context>
-<context>
-    <name>WalletController</name>
     </context>
 <context>
     <name>WalletFrame</name>

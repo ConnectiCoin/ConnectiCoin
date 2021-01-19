@@ -184,6 +184,10 @@
         <translation>Tárca titkosítva</translation>
     </message>
     <message>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your connecticoins from being stolen by malware infecting your computer.</source>
+        <translation>%1 Most az ablak bezáródik, amíg befejeződik a titkosítási folyamat. Kérem vegye figyelembe, hogy a pénztárca titkosítása nem jelenti a connecticoinjai teljes körű védelmét, a számítógépét esetlegesen megfertőző kártékony programoktól.</translation>
+    </message>
+    <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
         <translation>FONTOS: A régebbi biztonsági mentéseket frissítse az új, titkosított pénztárca fájllal. Biztonsági okokból, a korábbi titkosítatlan pénztárca fájlok nem használhatóak az új titkosított pénztárcával.</translation>
     </message>
@@ -246,6 +250,10 @@
         <translation>Á&amp;ttekintés</translation>
     </message>
     <message>
+        <source>Node</source>
+        <translation>Csomópont</translation>
+    </message>
+    <message>
         <source>Show general overview of wallet</source>
         <translation>A pénztárca általános áttekintése</translation>
     </message>
@@ -302,6 +310,14 @@
         <translation>&amp;Jelszóhalmaz megváltoztatása</translation>
     </message>
     <message>
+        <source>&amp;Sending addresses...</source>
+        <translation>&amp;Címek küldése</translation>
+    </message>
+    <message>
+        <source>&amp;Receiving addresses...</source>
+        <translation>Címek &amp;fogadása</translation>
+    </message>
+    <message>
         <source>Open &amp;URI...</source>
         <translation>&amp;URI... Megnyitása</translation>
     </message>
@@ -352,6 +368,10 @@
     <message>
         <source>ConnectiCoin</source>
         <translation>ConnectiCoin</translation>
+    </message>
+    <message>
+        <source>Wallet</source>
+        <translation>Tárca</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -464,10 +484,6 @@
     <message>
         <source>Show the %1 help message to get a list with possible ConnectiCoin command-line options</source>
         <translation>Mutassa a %1 súgó üzenetet a lehetséges ConnectiCoin parancssori beállítások listájáért</translation>
-    </message>
-    <message>
-        <source>&amp;Window</source>
-        <translation>&amp;Ablak</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -714,6 +730,10 @@
         <translation>&amp;Cím</translation>
     </message>
     <message>
+        <source>New receiving address</source>
+        <translation>Új fogadási cím</translation>
+    </message>
+    <message>
         <source>New sending address</source>
         <translation>Új küldési cím</translation>
     </message>
@@ -728,6 +748,10 @@
     <message>
         <source>The entered address "%1" is not a valid ConnectiCoin address.</source>
         <translation>A megadott cím"%1" nem egy érvényes ConnectiCoin cím.</translation>
+    </message>
+    <message>
+        <source>The entered address "%1" is already in the address book.</source>
+        <translation>A megadott cím "%1" már szerepel a címlistában.</translation>
     </message>
     <message>
         <source>Could not unlock wallet.</source>
@@ -778,6 +802,42 @@
     <message>
         <source>Command-line options</source>
         <translation>Parancssor beállításai</translation>
+    </message>
+    <message>
+        <source>Usage:</source>
+        <translation>Használat:</translation>
+    </message>
+    <message>
+        <source>command-line options</source>
+        <translation>parancssor beállításai</translation>
+    </message>
+    <message>
+        <source>UI Options:</source>
+        <translation>Felhasználói felület beállításai</translation>
+    </message>
+    <message>
+        <source>Choose data directory on startup (default: %u)</source>
+        <translation>Adja meg az indításkor használt adat könyvtárat (alapbeállítás: %u)</translation>
+    </message>
+    <message>
+        <source>Set language, for example "de_DE" (default: system locale)</source>
+        <translation>Nyelv beállítása, például "de_DE" (alaphelyzetben: a helyi rendszer nyelve)</translation>
+    </message>
+    <message>
+        <source>Start minimized</source>
+        <translation>Indítás rejtett ablakkal</translation>
+    </message>
+    <message>
+        <source>Set SSL root certificates for payment request (default: -system-)</source>
+        <translation>A fizetési kérelmek SSL tanúsítványainak beállítása (alaphelyzetben: -a rendszer beállításai szerint-)</translation>
+    </message>
+    <message>
+        <source>Show splash screen on startup (default: %u)</source>
+        <translation>Mutassa a kezdő képet indításkor (alaphelyzetben: %u)</translation>
+    </message>
+    <message>
+        <source>Reset all settings changed in the GUI</source>
+        <translation>A grafikus felület összes megváltoztatott beállításának a visszaállítása</translation>
     </message>
 </context>
 <context>
@@ -893,7 +953,11 @@
         <source>Hide</source>
         <translation>Elrejtés</translation>
     </message>
-    </context>
+    <message>
+        <source>Unknown. Syncing Headers (%1)...</source>
+        <translation>Ismeretlen. Fejlécek szinkronizálása (%1)...</translation>
+    </message>
+</context>
 <context>
     <name>OpenURIDialog</name>
     <message>
@@ -940,6 +1004,10 @@
         <translation>Az &amp;adatbázis cache mérete</translation>
     </message>
     <message>
+        <source>MB</source>
+        <translation>MB</translation>
+    </message>
+    <message>
         <source>Number of script &amp;verification threads</source>
         <translation>A szkript &amp;igazolási szálak száma</translation>
     </message>
@@ -966,6 +1034,10 @@
     <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
         <translation>Harmadik féltől származó URL-ek (pl. egy blokk felfedező) amelyek a tranzakciós fülön jelennek meg mint a környezetérzékeny menü tételei. %s az URL-ben helyettesítve a tranzakciós hash-el. Több URL esetén, függőleges vonal választja el őket.</translation>
+    </message>
+    <message>
+        <source>Active command-line options that override above options:</source>
+        <translation>Aktív parancssori beállítások, melyek felülírják a fenti beállításokat:</translation>
     </message>
     <message>
         <source>Open the %1 configuration file from the working directory.</source>
@@ -1879,10 +1951,6 @@
         <translation>Üzenet</translation>
     </message>
     <message>
-        <source>Wallet</source>
-        <translation>Tárca</translation>
-    </message>
-    <message>
         <source>Resulting URI too long, try to reduce the text for label / message.</source>
         <translation>A keletkezett URI túl hosszú, próbálja meg csökkenteni a cimke / üzenet szövegének méretét.</translation>
     </message>
@@ -2067,10 +2135,6 @@
     <message>
         <source>or</source>
         <translation>vagy</translation>
-    </message>
-    <message>
-        <source>Transaction fee</source>
-        <translation>Tranzakciós díj</translation>
     </message>
     <message>
         <source>The amount to pay must be larger than 0.</source>
@@ -2360,6 +2424,10 @@
         <translation>Címke</translation>
     </message>
     <message>
+        <source>Offline</source>
+        <translation>Offline</translation>
+    </message>
+    <message>
         <source>Unconfirmed</source>
         <translation>Nem megerősített</translation>
     </message>
@@ -2503,9 +2571,6 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
-    <name>WalletController</name>
-    </context>
-<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -2553,8 +2618,20 @@
 <context>
     <name>bitcoin-core</name>
     <message>
+        <source>Options:</source>
+        <translation>Beállítások:</translation>
+    </message>
+    <message>
+        <source>Accept command line and JSON-RPC commands</source>
+        <translation>Parancssoros és JSON-RPC parancsok elfogadása</translation>
+    </message>
+    <message>
         <source>ConnectiCoin Core</source>
         <translation>ConnectiCoin Mag</translation>
+    </message>
+    <message>
+        <source>Debugging/Testing options:</source>
+        <translation>Hibakeresési/Tesztelési beállítások:</translation>
     </message>
     <message>
         <source>Do you want to rebuild the block database now?</source>
@@ -2585,8 +2662,20 @@
         <translation>Blokkok megerősítése...</translation>
     </message>
     <message>
+        <source>Wallet debugging/testing options:</source>
+        <translation>Tárca hibakeresési/tesztelési beállítások:</translation>
+    </message>
+    <message>
+        <source>Wallet options:</source>
+        <translation>Tárca beállítások:</translation>
+    </message>
+    <message>
         <source>Information</source>
         <translation>Információ</translation>
+    </message>
+    <message>
+        <source>Show all debugging options (usage: --help -help-debug)</source>
+        <translation>Összes hibakeresési beállítás mutatása (használat: --help -help-debug)</translation>
     </message>
     <message>
         <source>Signing transaction failed</source>
@@ -2605,6 +2694,14 @@
         <translation>A tranzakció túl nagy</translation>
     </message>
     <message>
+        <source>Upgrade wallet to latest format on startup</source>
+        <translation>Tárca fejlesztése a legfrissebb formátumra az indításnál</translation>
+    </message>
+    <message>
+        <source>Username for JSON-RPC connections</source>
+        <translation>Felhasználónév a JSON-RPC kapcsolódásokhoz</translation>
+    </message>
+    <message>
         <source>Verifying wallet(s)...</source>
         <translation>Tárca/Tárcák megerősítése</translation>
     </message>
@@ -2613,8 +2710,20 @@
         <translation>Figyelmeztetés</translation>
     </message>
     <message>
+        <source>Password for JSON-RPC connections</source>
+        <translation>Jelszó a JSON-RPC kapcsolódásokhoz</translation>
+    </message>
+    <message>
         <source>%s is set very high!</source>
         <translation>%s túl magasra van állítva!</translation>
+    </message>
+    <message>
+        <source>Error loading wallet %s. Invalid characters in -wallet filename.</source>
+        <translation>Hiba a tárca betöltésekor %s. Érvénytelen karakterek a tárca fájlnévben.</translation>
+    </message>
+    <message>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: %u or testnet: %u)</source>
+        <translation>Figyelés a JSON-RPC kapcsolatokra itt: &lt;port&gt; (alapértelmezett:  %u vagy tesztnet: %u)</translation>
     </message>
     <message>
         <source>Starting network threads...</source>

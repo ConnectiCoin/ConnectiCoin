@@ -176,6 +176,10 @@
         <translation>Waled Wedi Amgryptio</translation>
     </message>
     <message>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your connecticoins from being stolen by malware infecting your computer.</source>
+        <translation>Bydd %1 nawr yn gorffen y broses amgryptio. Cofiwch nad ydy amgryptio eich waled yn llawn amddiffyn eich connecticoins rhag cael eu dwyn gan afiechyd yn heintio eich cyfrifiadur.</translation>
+    </message>
+    <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
         <translation>PWYSIG: Mi ddylai unrhyw back ups blaenorol rydych wedi ei wneud o ffeil eich waled gael ei ddiweddaru efo'r ffeil amgryptiedig newydd ei chreu. Am resymau diogelwch, bydd back ups blaenorol o ffeil y walet heb amgryptio yn ddiwerth mor fuan ac yr ydych yn dechrau defnyddio'r waled amgryptiedig newydd.</translation>
     </message>
@@ -238,6 +242,10 @@
         <translation>&amp;Trosolwg</translation>
     </message>
     <message>
+        <source>Node</source>
+        <translation>Nod</translation>
+    </message>
+    <message>
         <source>Show general overview of wallet</source>
         <translation>Dangos trosolwg cyffredinol y waled</translation>
     </message>
@@ -294,6 +302,14 @@
         <translation>&amp;Newid cyfrinymadrodd...</translation>
     </message>
     <message>
+        <source>&amp;Sending addresses...</source>
+        <translation>&amp;Cyfeiriadau anfon...</translation>
+    </message>
+    <message>
+        <source>&amp;Receiving addresses...</source>
+        <translation>&amp;Cyfeiriadau derbyn...</translation>
+    </message>
+    <message>
         <source>Open &amp;URI...</source>
         <translation>Agor &amp;URI...</translation>
     </message>
@@ -340,6 +356,10 @@
     <message>
         <source>ConnectiCoin</source>
         <translation>ConnectiCoin</translation>
+    </message>
+    <message>
+        <source>Wallet</source>
+        <translation>Waled</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -440,10 +460,6 @@
     <message>
         <source>Up to date</source>
         <translation>Cyfamserol</translation>
-    </message>
-    <message>
-        <source>&amp;Window</source>
-        <translation>&amp;Ffenestr</translation>
     </message>
     <message>
         <source>Connecting to peers...</source>
@@ -607,6 +623,10 @@
     </context>
 <context>
     <name>HelpMessageDialog</name>
+    <message>
+        <source>Usage:</source>
+        <translation>Cynefod:</translation>
+    </message>
     </context>
 <context>
     <name>Intro</name>
@@ -757,10 +777,6 @@
     <message>
         <source>Label</source>
         <translation>Label</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Waled</translation>
     </message>
     </context>
 <context>
@@ -991,9 +1007,6 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
-    <name>WalletController</name>
-    </context>
-<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -1024,6 +1037,10 @@
     </context>
 <context>
     <name>bitcoin-core</name>
+    <message>
+        <source>Options:</source>
+        <translation>Opsiynau:</translation>
+    </message>
     <message>
         <source>ConnectiCoin Core</source>
         <translation>Craidd ConnectiCoin</translation>
