@@ -102,8 +102,9 @@ public:
          * a large 32-bit integer with any alignment.
          */
         pchMessageStart[0] = 0x1c; // C
-        pchMessageStart[1] = 0x41; // T
-        pchMessageStart[2] = 0x57; // c
+        pchMessageStart[1] = 0x35; // N
+        pchMessageStart[2] = 0x41; // T
+        pchMessageStart[3] = 0x1c; // C
         nDefaultPort = 2626;
         nPruneAfterHeight = 100000;
         m_assumed_blockchain_size = 22;
