@@ -174,8 +174,8 @@ public:
         consensus.BIP65Height = 0; 
         consensus.BIP66Height = 0; 
         consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
-        consensus.nPowTargetTimespan =  1 * 60;
-        consensus.nPowTargetSpacing = 0.5 * 60;
+        consensus.nPowTargetTimespan =  45.15 * 60; // every 129 blocks
+        consensus.nPowTargetSpacing = 0.35 * 60; // approximatively 20 seconds
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 30; // 75% for testchains
@@ -200,10 +200,10 @@ public:
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("0x3844b3d5dddce8a712e31b77311f83b49316c89eb14a273c5cb343d11ecfc920");
 
-        pchMessageStart[0] = 0x42; // T
+        pchMessageStart[0] = 0x41; // T
         pchMessageStart[1] = 0x21; // E
         pchMessageStart[2] = 0x3f; // S
-        pchMessageStart[3] = 0x41; // T
+        pchMessageStart[3] = 0x42; // T
         nDefaultPort = 12626;
         nPruneAfterHeight = 1000;
 
