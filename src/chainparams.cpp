@@ -87,8 +87,8 @@ public:
         consensus.nPowTargetSpacing = 0.5 * 60;
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
-        consensus.nRuleChangeActivationThreshold = 30; // 75% of 40
-        consensus.nMinerConfirmationWindow = 160; // nPowTargetTimespan / nPowTargetSpacing * 4
+        consensus.nRuleChangeActivationThreshold = 30240; // 75% of 40320
+        consensus.nMinerConfirmationWindow = 40320;
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].bit = 28;
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 1199145601; 
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1230767999; 
@@ -170,12 +170,12 @@ public:
         consensus.nSubsidyHalvingInterval = 3200000;
         consensus.BIP16Height = 0; // always enforce P2SH BIP16 on regtest
         consensus.BIP34Height = 0;
-        consensus.BIP34Hash = uint256();
+        consensus.BIP34Hash = uint256S("0x3844b3d5dddce8a712e31b77311f83b49316c89eb14a273c5cb343d11ecfc920");
         consensus.BIP65Height = 0; 
         consensus.BIP66Height = 0; 
-        consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
-        consensus.nPowTargetTimespan =  45.15 * 60; // every 129 blocks
-        consensus.nPowTargetSpacing = 0.35 * 60; // approximatively 20 seconds
+        consensus.powLimit = uint256S("00ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
+        consensus.nPowTargetTimespan =  129 * 60;
+        consensus.nPowTargetSpacing = 0.5 * 60;
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 30; // 75% for testchains
@@ -200,10 +200,10 @@ public:
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("0x3844b3d5dddce8a712e31b77311f83b49316c89eb14a273c5cb343d11ecfc920");
 
-        pchMessageStart[0] = 0x41; // T
-        pchMessageStart[1] = 0x21; // E
-        pchMessageStart[2] = 0x3f; // S
-        pchMessageStart[3] = 0x42; // T
+        pchMessageStart[0] = 0xa1;
+        pchMessageStart[1] = 0xb2;
+        pchMessageStart[2] = 0xc3;
+        pchMessageStart[3] = 0xd4;
         nDefaultPort = 12626;
         nPruneAfterHeight = 1000;
 
@@ -215,10 +215,10 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,87);
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,88);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,88);
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,87);
         base58Prefixes[SCRIPT_ADDRESS2] = std::vector<unsigned char>(1,87);
-        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,178);
+        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,117);
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x35, 0x87, 0xCF};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x35, 0x83, 0x94};
 
