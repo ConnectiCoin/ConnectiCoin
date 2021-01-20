@@ -51,7 +51,7 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
     const char* pszTimestamp = "Pence says he won't invoke 25th Amendment as House prepares to act";
-    const CScript genesisOutputScript = CScript() << ParseHex("0488c50920c1e73135db350205344ba8704815a774dc145f8e7cbd57410d5a0b86fa112422e27b251bef0dbe1b66b1fbfdc47a726219d4d7eb8c484defc8598fe0") << OP_CHECKSIG;
+    const CScript genesisOutputScript = CScript() << ParseHex("0414e3f298ac791409f39417d816b13d5f27a9d61f54624b0d766659c4684c58551c3fe47b38d58ec4cc927db260400e878b699d12fb35ca48dae2b342bf854962") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
 
@@ -79,11 +79,11 @@ public:
         consensus.nSubsidyHalvingInterval = 3200000;
         consensus.BIP16Height = 0; 
         consensus.BIP34Height = 0;
-        consensus.BIP34Hash = uint256();
+        consensus.BIP34Hash = uint256S("0x8a5d30b302f48dd6c3d95e5f40e53b2c8587131aa8321d3267848eeb166b3c0f");
         consensus.BIP65Height = 0; 
         consensus.BIP66Height = 0; 
         consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); 
-        consensus.nPowTargetTimespan =  1 * 60;
+        consensus.nPowTargetTimespan =  129 * 60;
         consensus.nPowTargetSpacing = 0.5 * 60;
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
@@ -107,24 +107,24 @@ public:
         consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000100010");
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x3844b3d5dddce8a712e31b77311f83b49316c89eb14a273c5cb343d11ecfc920"); 
+        consensus.defaultAssumeValid = uint256S("0x8a5d30b302f48dd6c3d95e5f40e53b2c8587131aa8321d3267848eeb166b3c0f"); 
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 32-bit integer with any alignment.
          */
-        pchMessageStart[0] = 0x1c; // C
-        pchMessageStart[1] = 0x35; // N
-        pchMessageStart[2] = 0x41; // T
-        pchMessageStart[3] = 0x34; // C
+        pchMessageStart[0] = 0x2d;
+        pchMessageStart[1] = 0x3f;
+        pchMessageStart[2] = 0x4a;
+        pchMessageStart[3] = 0x5b;
         nDefaultPort = 2626;
         nPruneAfterHeight = 100000;
 
-        genesis = CreateGenesisBlock(1611015555, 732563, 0x1e0ffff0, 1, 5 * COIN);
+        genesis = CreateGenesisBlock(1611161522, 92714, 0x1e0ffff0, 1, 5 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x3844b3d5dddce8a712e31b77311f83b49316c89eb14a273c5cb343d11ecfc920"));
-        assert(genesis.hashMerkleRoot == uint256S("0x415cac7c6b96282c8bca9d6482f4b28a68a1183d81d73c5f842a0d2571cce820"));
+        assert(consensus.hashGenesisBlock == uint256S("0x8a5d30b302f48dd6c3d95e5f40e53b2c8587131aa8321d3267848eeb166b3c0f"));
+        assert(genesis.hashMerkleRoot == uint256S("0x4c4ab7cb4f288847021aae8f2ac1a1dbe806297cab1d6ae2cafa93ed093d9c90"));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
         // vSeeds.emplace_back("");
@@ -146,13 +146,13 @@ public:
 
         checkpointData = {
             {
-                {  0, uint256S("0x3844b3d5dddce8a712e31b77311f83b49316c89eb14a273c5cb343d11ecfc920")},
+                {  0, uint256S("0x8a5d30b302f48dd6c3d95e5f40e53b2c8587131aa8321d3267848eeb166b3c0f")},
             }
         };
 
         chainTxData = ChainTxData{
-            // Data as of block 3844b3d5dddce8a712e31b77311f83b49316c89eb14a273c5cb343d11ecfc920 (height 0).
-            1611015555, // * UNIX timestamp of last known number of transactions
+            // Data as of block 8a5d30b302f48dd6c3d95e5f40e53b2c8587131aa8321d3267848eeb166b3c0f (height 0).
+            1611161522, // * UNIX timestamp of last known number of transactions
             0,  // * total number of transactions between genesis and that timestamp
                     //   (the tx=... number in the SetBestChain debug.log lines)
             0     // * estimated number of transactions per second after that timestamp
@@ -170,7 +170,7 @@ public:
         consensus.nSubsidyHalvingInterval = 3200000;
         consensus.BIP16Height = 0; // always enforce P2SH BIP16 on regtest
         consensus.BIP34Height = 0;
-        consensus.BIP34Hash = uint256S("0x3844b3d5dddce8a712e31b77311f83b49316c89eb14a273c5cb343d11ecfc920");
+        consensus.BIP34Hash = uint256S("0xe6759e683b9e6a9f0d4651ca0ee84efb108bc5af2bac1c20f63b91591a2bb873");
         consensus.BIP65Height = 0; 
         consensus.BIP66Height = 0; 
         consensus.powLimit = uint256S("00ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
@@ -207,10 +207,10 @@ public:
         nDefaultPort = 12626;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1611015555, 732563, 0x1e0ffff0, 1, 5 * COIN);
+        genesis = CreateGenesisBlock(1611161834, 1522515, 0x1e0ffff0, 1, 5 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x3844b3d5dddce8a712e31b77311f83b49316c89eb14a273c5cb343d11ecfc920"));
-        assert(genesis.hashMerkleRoot == uint256S("0x415cac7c6b96282c8bca9d6482f4b28a68a1183d81d73c5f842a0d2571cce820"));
+        assert(consensus.hashGenesisBlock == uint256S("0xe6759e683b9e6a9f0d4651ca0ee84efb108bc5af2bac1c20f63b91591a2bb873"));
+        assert(genesis.hashMerkleRoot == uint256S("0x4c4ab7cb4f288847021aae8f2ac1a1dbe806297cab1d6ae2cafa93ed093d9c90"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -232,13 +232,13 @@ public:
 
         checkpointData = (CCheckpointData) {
             {
-                {0, uint256S("0x3844b3d5dddce8a712e31b77311f83b49316c89eb14a273c5cb343d11ecfc920")},
+                {0, uint256S("0xe6759e683b9e6a9f0d4651ca0ee84efb108bc5af2bac1c20f63b91591a2bb873")},
             }
         };
 
         chainTxData = ChainTxData{
-            // Data as of block 3844b3d5dddce8a712e31b77311f83b49316c89eb14a273c5cb343d11ecfc920 (height 0)
-            1611015555,
+            // Data as of block e6759e683b9e6a9f0d4651ca0ee84efb108bc5af2bac1c20f63b91591a2bb873 (height 0)
+            1611161834,
             0,
             0
         };
@@ -282,10 +282,10 @@ public:
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("0x00");
 
-        pchMessageStart[0] = 0xfd;
-        pchMessageStart[1] = 0xf2;
-        pchMessageStart[2] = 0x85;
-        pchMessageStart[3] = 0x15;
+        pchMessageStart[0] = 0x1b;
+        pchMessageStart[1] = 0x6a;
+        pchMessageStart[2] = 0x3d;
+        pchMessageStart[3] = 0x4c;
         nDefaultPort = 22626;
         nPruneAfterHeight = 1000;
 
