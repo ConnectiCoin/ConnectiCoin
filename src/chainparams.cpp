@@ -283,10 +283,10 @@ public:
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("0x00");
 
-        pchMessageStart[0] = 0xfa;
-        pchMessageStart[1] = 0xbf;
-        pchMessageStart[2] = 0xb5;
-        pchMessageStart[3] = 0xda;
+        pchMessageStart[0] = 0x2c;
+        pchMessageStart[1] = 0x5d;
+        pchMessageStart[2] = 0xe6;
+        pchMessageStart[3] = 0x7a;
         nDefaultPort = 22626;
         nPruneAfterHeight = 1000;
         m_assumed_blockchain_size = 0;
@@ -294,10 +294,10 @@ public:
 
         UpdateVersionBitsParametersFromArgs(args);
 
-        genesis = CreateGenesisBlock(1611015555, 0, 0x207fffff, 1, 5 * COIN);
+        genesis = CreateGenesisBlock(1611199999, 1, 0x207fffff, 1, 5 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x0e45f612b5119a9ec8f352a71ade6ee399f18a8fdeec94e63ff5b213b27471c7"));
-        assert(genesis.hashMerkleRoot == uint256S("0x415cac7c6b96282c8bca9d6482f4b28a68a1183d81d73c5f842a0d2571cce820"));
+        assert(consensus.hashGenesisBlock == uint256S("0xe5abee99f27074354baf4315348cb3a820b0a4102426d29177548b4f63ca2bc1"));
+        assert(genesis.hashMerkleRoot == uint256S("0x4c4ab7cb4f288847021aae8f2ac1a1dbe806297cab1d6ae2cafa93ed093d9c90"));
 
         vFixedSeeds.clear(); //!< Regtest mode doesn't have any fixed seeds.
         vSeeds.clear();      //!< Regtest mode doesn't have any DNS seeds.
@@ -308,7 +308,7 @@ public:
 
         checkpointData = {
             {
-                {0, uint256S("0x0e45f612b5119a9ec8f352a71ade6ee399f18a8fdeec94e63ff5b213b27471c7")},
+                {0, uint256S("0xe5abee99f27074354baf4315348cb3a820b0a4102426d29177548b4f63ca2bc1")},
             }
         };
 
