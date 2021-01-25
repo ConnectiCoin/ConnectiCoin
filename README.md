@@ -1,7 +1,7 @@
 ConnectiCoin Project
 ===================================== 
 ![](share/pixmaps/bitcoin128.png)
-
+ 
 ---------------- 
 What is Connecticoin?
 ----------------
