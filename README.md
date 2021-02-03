@@ -32,6 +32,8 @@ information or see http://opensource.org/licenses/MIT.
 Development process
 -------------------
 
+Join our Discord - https://discord.com/invite/zzUfpFDnGS
+
 Developers work in their own trees, then submit pull requests when they think
 their feature or bug fix is ready.
 
