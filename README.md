@@ -6,14 +6,19 @@ ConnectiCoin Project
 What is Connecticoin?
 ----------------
 
-Offering lower transaction fees. Connecticoin is the faster version of Litecoin and Bitcoin using scrypt as a proof-of-work algorithm. 
- - 2.5 minute block targets
- - subsidy halves in 3.2 Million blocks (~3 years)
- - 32 million total coins
+Connecticoin is another version of Litecoin and Bitcoin using scrypt as a proof-of-work algorithm.
+Connecticoin offers a lower transaction fee, requires more blocks to mint coins, and adjusts difficulty more frequently than LTC and BTC.
+Fees were lowered to help our users scale this project without having to worry about escalating fees.
+Blocks for minting were increased to prevent non users of the coin from mining the coin only to dump or withhold them from the community.
+Difficulty adjusts more frequently to avoid huge gaps of time between block generation and prevent hashing attacks. 
+ - 0.5 minute block targets
+ - Block Rewards Halved every 3.2 Million blocks (~3 years)
+ - 32 million total coin supply
 
 Mining rewards.
- - 5 coins per block
- - 129 blocks to retarget difficulty
+ - 5 coins per block. 
+ - 129 blocks to retarget difficulty.
+ - Coins need 2000 blocks to mint.
 
 For more information, as well as an immediately useable, binary version of
 the Connecticoin client sofware, see http://www.connecticoin.com
