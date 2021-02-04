@@ -107,7 +107,7 @@ public:
         pchMessageStart[3] = 0x3d;
         nDefaultPort = 2626;
         nPruneAfterHeight = 100000;
-        m_assumed_blockchain_size = 0.02;
+        m_assumed_blockchain_size = 0.022;
         m_assumed_chain_state_size = 0.001;
 
         genesis = CreateGenesisBlock(1611501978, 327949, 0x1e0ffff0, 1, 5 * COIN);
@@ -140,14 +140,15 @@ public:
         checkpointData = {
             {
                 {  0, uint256S("0x3036bccc45e98ae96419dafa08ded4bede1e7f84898334fe489df953a8f1af00")},
+                {  30000, uint256S("0xa1edd3ce504681790adf543a26aec9be4a1cbf892f277ad2cf9de1ec1418b3c0")},
             }
         };
 
         chainTxData = ChainTxData{
             // Data from rpc: getchaintxstats 0
-            /* nTime    */ 1611501978,
-            /* nTxCount */ 0,
-            /* dTxRate  */ 0
+            /* nTime    */ 1612404516,
+            /* nTxCount */ 31717,
+            /* dTxRate  */ 0.03411864558109915
         };
 
         /* disable fallback fee on mainnet */
