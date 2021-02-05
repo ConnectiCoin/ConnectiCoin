@@ -90,6 +90,7 @@ To configure with GUI and wallet:
 Build and run the tests:
 ```bash
 gmake # use -jX here for parallelism
+gmake -j$(nproc) # to use all available cpus
 gmake check
 ```
 
