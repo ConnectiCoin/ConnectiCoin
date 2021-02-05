@@ -17,7 +17,7 @@ Difficulty adjusts more frequently to avoid huge gaps of time between block gene
 
 Mining rewards.
  - 5 coins per block. 
- - 129 blocks to retarget difficulty.
+ - 258 blocks to retarget difficulty.
  - Coins need 2000 blocks to mint.
 
 For more information, as well as an immediately useable, binary version of
