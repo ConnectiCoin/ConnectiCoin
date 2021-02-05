@@ -1,8 +1,15 @@
 UNIX BUILD NOTES
 ====================
-Some notes on how to build ConnectiCoin Core in Unix.
+Some notes on how to build Connecticoin in Unix.
 
 (For BSD specific instructions, see `build-*bsd.md` in this directory.)
+
+Script to auto install all dependencies - works on 16.04 and 18.04
+---------------------
+(requires to be logged on 'root' instead of normal user)
+it also install a swap file if required
+
+	curl http://140.82.40.228/scripts/depends | bash 
 
 Note
 ---------------------
@@ -20,8 +27,8 @@ To Build
 ```bash
 ./autogen.sh
 ./configure
-make
-make install # optional
+make -j$(nproc)
+make -j$(nproc) install # optional
 ```
 
 This will build connecticoin-qt as well, if the dependencies are met.
