@@ -16,6 +16,7 @@ pkg_add git gmake libevent libtool boost
 pkg_add autoconf # (select highest version, e.g. 2.69)
 pkg_add automake # (select highest version, e.g. 1.16)
 pkg_add python # (select highest version, e.g. 3.6)
+pkg_add qt5 # (optional for enabling the GUI)
 
 git clone https://github.com/ConnectiCoin/ConnectiCoin.git
 ```
@@ -76,6 +77,14 @@ To configure with wallet:
 To configure without wallet:
 ```bash
 ./configure --disable-wallet --with-gui=no CC=cc CXX=c++
+```
+
+To configure with GUI and wallet:
+```bash
+./configure --with-gui=yes CC=cc CXX=c++ \
+    BDB_LIBS="-L${BDB_PREFIX}/lib -ldb_cxx-4.8" \
+    BDB_CFLAGS="-I${BDB_PREFIX}/include" \
+    MAKE=gmake
 ```
 
 Build and run the tests:
