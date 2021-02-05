@@ -56,5 +56,6 @@ followed by:
 
 ```shell
 gmake # use -jX here for parallelism
+gmake -j$(nproc) # use all available cpus for faster compile
 gmake check # Run tests if Python 3 is available
 ```
