@@ -18,7 +18,7 @@ Difficulty adjusts more frequently to avoid huge gaps of time between block gene
 Mining rewards.
  - 5 coins per block. 
  - 258 blocks to retarget difficulty.
- - Coins need 2000 blocks to mint.
+ - Coins need 2000 blocks to maturing.
 
 For more information, as well as an immediately useable, binary version of
 the Connecticoin client sofware, see http://www.connecticoin.com
