@@ -90,8 +90,8 @@ To configure with GUI and wallet:
 Build and run the tests:
 ```bash
 gmake # use -jX here for parallelism
-gmake -j$(NPROC=`sysctl hw.ncpu | awk '{print $2}'`) # to use all available cpus
-gmake check
+gmake -j$(NPROC=`sysctl hw.ncpu | awk '{print $2}'`) # to use all available cpus  <----- AVOID!! WILL FREEZE YOUR OpenBSD SERVER
+gmake check (optional)
 ```
 
 Resource limits
