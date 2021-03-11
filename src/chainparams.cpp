@@ -136,7 +136,7 @@ public:
         // service bits we want, but we should get them updated to support all service bits wanted by any
         // release ASAP to avoid it where possible.
         // vSeeds.emplace_back("");
-        vSeeds.emplace_back("104.131.18.183"); // official node 1, also block explorer
+        vSeeds.emplace_back("162.243.162.160"); // official node 1, also block explorer
         vSeeds.emplace_back("140.82.40.228"); // official node 2
         vSeeds.emplace_back("50.208.151.117"); // community node
         vSeeds.emplace_back("144.217.51.120"); // community node
