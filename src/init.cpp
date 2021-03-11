@@ -556,23 +556,65 @@ void SetupServerArgs()
 std::string LicenseInfo()
 {
     const std::string URL_SOURCE_CODE = "<https://github.com/ConnectiCoin/ConnectiCoin>";
-    const std::string URL_WEBSITE = "<http://connecticoin.com>";
+    const std::string URL_WEBSITE = "<https://connecticoin.com>";
+    const std::string URL_EXPLORER = "<https://explorer.connecticoin.com>";
+    const std::string URL_OFFICIALPOOL = "<https://connecticoinpool.xyz/>";
+    const std::string URL_WALLETS = "<https://github.com/ConnectiCoin/ConnectiCoin/releases>";
+    const std::string URL_DISCORD = "<https://discord.gg/4HFycRbMA3>";
+    const std::string URL_TWITTER = "<https://twitter.com/connecticoin>";
+    const std::string URL_TELEGRAM = "<https://t.me/joinchat/IHrA2WUh85mtjPNw>";
+    const std::string URL_FORUM = "<https://bitcointalk.org/index.php?topic=5312031.0>";
+    const std::string URL_PAPERWALLET = "<https://paperwallet.connecticoin.com/>";
+    const std::string URL_MININGPOOLS = "<https://miningpoolstats.stream/connecticoin>";
 
-//    return CopyrightHolders(strprintf(_("Copyright (C) %i-%i"), 2011, COPYRIGHT_YEAR) + " ") + "\n" +
+
+//    return CopyrightHolders(strprintf(_("Copyright (C) %i-%i"), 2021, COPYRIGHT_YEAR) + " ") + "\n" +
     return
            "\n" +
-           strprintf(_("Please contribute if you find %s useful. "
-                       "Visit %s for further information about the software."),
-               PACKAGE_NAME, URL_WEBSITE) +
+           strprintf(_("Website: %s"), + "\n" +
+               URL_WEBSITE) +
            "\n" +
-           strprintf(_("The source code is available from %s."),
+           _("--------------------------------------------") + "\n" +
+           strprintf(_("Explorer %s."), + "\n" +
+               URL_EXPLORER) +
+           "\n" +
+           _("--------------------------------------------") + "\n" +
+           strprintf(_("Official Pool: %s"), + "\n" +
+               URL_OFFICIALPOOL) +
+           "\n" +
+           _("--------------------------------------------") + "\n" +
+           strprintf(_("Community Pools: %s"), + "\n" +
+               URL_MININGPOOLS) +
+           "\n" +
+           _("--------------------------------------------") + "\n" +
+           strprintf(_("Paper wallet: %s"), + "\n" +
+               URL_PAPERWALLET) +
+           "\n" +
+           _("--------------------------------------------") + "\n" +
+           strprintf(_("Source code: %s"), + "\n" +
                URL_SOURCE_CODE) +
            "\n" +
+           _("--------------------------------------------") + "\n" +
+           strprintf(_("Wallets: %s"), + "\n" +
+               URL_WALLETS) +
            "\n" +
-           _("This is experimental software.") + "\n" +
-           strprintf(_("Distributed under the MIT software license, see the accompanying file %s or %s"), "COPYING", "<https://opensource.org/licenses/MIT>") + "\n" +
+           _("--------------------------------------------") + "\n" +
+           strprintf(_("Discord: %s"), + "\n" +
+               URL_DISCORD) +
            "\n" +
-           strprintf(_("This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit %s and cryptographic software written by Eric Young and UPnP software written by Thomas Bernard."), "<https://www.openssl.org>") +
+           _("--------------------------------------------") + "\n" +
+           strprintf(_("Twitter: %s"), + "\n" +
+               URL_TWITTER) +
+           "\n" +
+           _("--------------------------------------------") + "\n" +
+           strprintf(_("Forum: %s"), + "\n" +
+               URL_FORUM) +
+           "\n" +
+           _("----------------------------------------------------------------------------------------") + "\n" +
+           "\n" +
+           "\n" +
+           "\n" +
+           strprintf(_("This is a software distributed under the MIT software license, see the accompanying file %s or %s"), "COPYING", "<https://opensource.org/licenses/MIT>") + "\n" +
            "\n";
 }
 
