@@ -556,7 +556,7 @@ void SetupServerArgs()
 std::string LicenseInfo()
 {
     const std::string URL_SOURCE_CODE = "<https://github.com/ConnectiCoin/ConnectiCoin>";
-    const std::string URL_WEBSITE = "<https://connecticoin.com>";
+    const std::string URL_WEBSITE = "<http://connecticoin.com>";
 
 //    return CopyrightHolders(strprintf(_("Copyright (C) %i-%i"), 2011, COPYRIGHT_YEAR) + " ") + "\n" +
     return
