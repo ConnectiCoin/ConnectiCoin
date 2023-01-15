@@ -130,17 +130,9 @@ public:
         assert(consensus.hashGenesisBlock == uint256S("0x3036bccc45e98ae96419dafa08ded4bede1e7f84898334fe489df953a8f1af00"));
         assert(genesis.hashMerkleRoot == uint256S("0xb25f24ee5d0578588bbd8e29eaf035868ad12521c7dc377d62459b78c28ea999"));
 
-        // Note that of those which support the service bits prefix, most only support a subset of
-        // possible options.
-        // This is fine at runtime as we'll fall back to using them as a oneshot if they don't support the
-        // service bits we want, but we should get them updated to support all service bits wanted by any
-        // release ASAP to avoid it where possible.
-        // vSeeds.emplace_back("");
-        vSeeds.emplace_back("162.243.162.160"); // official node 1, also block explorer
-        vSeeds.emplace_back("140.82.40.228"); // official node 2
-        vSeeds.emplace_back("50.208.151.117"); // community node
-        vSeeds.emplace_back("144.217.51.120"); // community node
-        vSeeds.emplace_back("143.198.2.153"); // community node
+
+        vSeeds.emplace_back("seed01.altcoinbuilders.com"); // community node
+        vSeeds.emplace_back("seed02.altcoinbuilders.com"); // community node
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,87);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,88);
