@@ -160,18 +160,27 @@ public:
         checkpointData = {
             {
                 {  0, uint256S("0x3036bccc45e98ae96419dafa08ded4bede1e7f84898334fe489df953a8f1af00")},
+                {  1, uint256S("0x2176b2e91163b2b5c0d82d0b8faa0254e685b7e4d001a373dbb8951445600183")},
+                {  16, uint256S("0x75d1f631b16ccdd440098b7009397b712a3ff0c766d4b227230a1bf2150a4590")},
+                {  100, uint256S("0xe24200bf39f73ee91463621dd8e64dbdb1d51677d0f12831533a873e21600da0")},
+                {  101, uint256S("0x0c8c338baad339817700d962cff1408b386185ef1efaef4e951d1ea50dba5cf0")},
+                {  3091, uint256S("0x790a70b94b4c119ef61f8f79dff6d2d34253ada3adcf2a65328cd6d61ad73017")},
+                {  14199, uint256S("0x2d956fbbf94b9359615fd71470110b14f1740846f6a63ee01e0e416715717052")},
+                {  57332, uint256S("0x7000970ea711c1859cff54452089a53d50dde0d9400439d01b5a42e4dd21395b")},
                 {  30000, uint256S("0xa1edd3ce504681790adf543a26aec9be4a1cbf892f277ad2cf9de1ec1418b3c0")},
+                {  320917, uint256S("0x0cb7d89f2f48855838fa2d1e3adb7e90105151ab4ed5c78b2418781b060700c5")},
                 {  100000, uint256S("0x16ec642f1826b882d1529dc48d26d37b7c944f76e20af7354d32427b72a4436e")},
                 {  126000, uint256S("0x5682f9e7c272c8b874a8d9b5c60b64b591049c1cb64ef8e364197bb1d702325c")},
                 {  218000, uint256S("0x69a8d4a40e0fcb6d3f652b318edaf73a0822aad57f96b9bbf03d1f11a9afc519")},
+                {  334883, uint256S("0x112130bb14f2e3c0f39de09dec6d8a1a4f4fd4f7c7ba2e02170149be1972a9f6")},
             }
         };
 
         chainTxData = ChainTxData{
-            // Data from rpc: getchaintxstats 218000 69a8d4a40e0fcb6d3f652b318edaf73a0822aad57f96b9bbf03d1f11a9afc519
-            /* nTime    */ 1618593016,
-            /* nTxCount */ 223856,
-            /* dTxRate  */ 0.03118154625679645
+            // Data from rpc: getchaintxstats
+            /* nTime    */ 1627243559,
+            /* nTxCount */ 342666,
+            /* dTxRate  */ 0.021771
         };
 
         /* disable fallback fee on mainnet */
