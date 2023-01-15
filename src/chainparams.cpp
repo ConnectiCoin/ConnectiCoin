@@ -130,7 +130,7 @@ public:
         assert(consensus.hashGenesisBlock == uint256S("0x3036bccc45e98ae96419dafa08ded4bede1e7f84898334fe489df953a8f1af00"));
         assert(genesis.hashMerkleRoot == uint256S("0xb25f24ee5d0578588bbd8e29eaf035868ad12521c7dc377d62459b78c28ea999"));
 
-
+        vSeeds.emplace_back("207.244.243.35"); // community node
         vSeeds.emplace_back("seed01.altcoinbuilders.com"); // community node
         vSeeds.emplace_back("seed02.altcoinbuilders.com"); // community node
 
